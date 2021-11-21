@@ -48,6 +48,7 @@ main {
     width: 300px;
     margin: 1rem;
     background-color: var(--header-color);
+    position: relative;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -59,19 +60,46 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
 }
 .movie-info h3 {
-    margin-left: 3px;
+    margin-left: 0.5rem;
 }
 .overview {
+    display: none;
     color: #fff;
-    margin: 11px;
+    margin: 10px;
+    max-height: 100%;
+}
+.overview p {
+    margin: 0 2px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
 }
 .overview h3 {
-    
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 .movie-info span{
-    border-radius: 3px;
+    background-color: var(--additional-color);
+    border-radius: 50%;
+    font-weight: bold;
     padding: 0.25rem 0.5rem;
 }
+.movie:hover .overview {
+    display: block;
+    transition: 0.3s ease-in;
+}
+.movie-info span.good {
+    color: #00FF00;
+}
+.movie-info span.average {
+    color: #F4A460;
+}
+.movie-info span.poor {
+    color: 	#DC143C;
+}   
